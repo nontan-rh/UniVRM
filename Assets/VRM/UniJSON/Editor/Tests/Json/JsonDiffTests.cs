@@ -9,7 +9,7 @@ namespace UniJSON
         [Test]
         public void PathTest()
         {
-            var json=@"
+            var json = @"
 {
     ""a"": [
         {
@@ -25,7 +25,7 @@ namespace UniJSON
                 it.MoveNext(); Assert.AreEqual("/", it.Current.Pointer().ToString());
                 it.MoveNext(); Assert.AreEqual("/a", it.Current.Pointer().ToString());
                 it.MoveNext(); Assert.AreEqual("/a/0", it.Current.Pointer().ToString());
-                it.MoveNext(); Assert.AreEqual("/a/0/aa", it.Current.Pointer().ToString());
+                it.MoveNext(); Assert.AreEqual("/a/0/aaaa", it.Current.Pointer().ToString());
                 Assert.False(it.MoveNext());
             }
 
