@@ -1,6 +1,7 @@
 ﻿using NUnit.Framework;
 using UnityEngine;
 
+#if UNITY_EDITOR
 
 namespace UniHumanoid
 {
@@ -1358,3 +1359,4 @@ ROOT hip
     }
 #endif
 }
+#endif
