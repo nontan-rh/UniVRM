@@ -360,6 +360,11 @@ namespace UniJSON
                     };
                 }
 
+                internal static void TellIl2cppToGenerateGenericMethodCode<U>()
+                {
+                    _CreateFieldValidator<U>(null);
+                }
+
                 public ObjectValidator()
                 {
                     var validators = new Dictionary<string, FieldValidator>();
@@ -467,6 +472,11 @@ namespace UniJSON
                 prepareValidator();
                 s_validator.ValidationResults(required, properties, c, o, results);
             }
+
+            internal static void TellIl2cppToGenerateGenericMethodCode<U>()
+            {
+                ObjectValidator.TellIl2cppToGenerateGenericMethodCode<U>();
+            }
         }
 
         public JsonSchemaValidationException Validate<T>(JsonSchemaValidationContext c, T o)
@@ -534,6 +544,11 @@ namespace UniJSON
                     };
                 }
 
+                internal static void TellIl2cppToGenerateGenericMethodCode<U>()
+                {
+                    Serializer._CreateFieldSerializer<U>(null);
+                }
+
                 public Serializer()
                 {
                     var serializers = new Dictionary<string, FieldSerializer>();
@@ -584,6 +599,11 @@ namespace UniJSON
                 }
 
                 s_serializer.Serialize(objectValidator, f, c, value);
+            }
+
+            internal static void TellIl2cppToGenerateGenericMethodCode<U>()
+            {
+                Serializer.TellIl2cppToGenerateGenericMethodCode<U>();
             }
         }
 
@@ -681,6 +701,12 @@ namespace UniJSON
             where T : IListTreeItem, IValue<T>
         {
             GenericDeserializer<T, U>.Deserialize(src, ref dst, Properties);
+        }
+
+        internal static void TellIl2cppToGenerateGenericMethodCode<T, U>()
+        {
+            GenericValidator<T>.TellIl2cppToGenerateGenericMethodCode<U>();
+            GenericSerializer<T>.TellIl2cppToGenerateGenericMethodCode<U>();
         }
     }
 }

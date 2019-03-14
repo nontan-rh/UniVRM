@@ -296,5 +296,12 @@ namespace UniJSON
         {
             src.Deserialize(ref dst);
         }
+
+        internal static void TellIl2cppToGenerateGenericMethodCode<T>()
+        {
+            ArraySerializer<T>(null, null, null, null);
+            ListSerializer<T>(null, null, null, null);
+            GenericSerializer<T>.Serialize(null, null, null, default(T));
+        }
     }
 }
