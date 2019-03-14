@@ -360,6 +360,22 @@ namespace UniJSON
                     };
                 }
 
+                public static void TellIl2cppToGenerateRequiredGenericMethodCodes()
+                {
+                    GenericValidator<UnityEngine.Color>.ObjectValidator._CreateFieldValidator<Single>(null);
+                    GenericValidator<UnityEngine.Color32>.ObjectValidator._CreateFieldValidator<Byte>(null);
+                    GenericValidator<UnityEngine.Rect>.ObjectValidator._CreateFieldValidator<Single>(null);
+                    GenericValidator<UnityEngine.RectInt>.ObjectValidator._CreateFieldValidator<Int32>(null);
+                    GenericValidator<UnityEngine.RectOffset>.ObjectValidator._CreateFieldValidator<Int32>(null);
+                    GenericValidator<UnityEngine.Vector2>.ObjectValidator._CreateFieldValidator<Single>(null);
+                    GenericValidator<UnityEngine.Vector2Int>.ObjectValidator._CreateFieldValidator<Int32>(null);
+                    GenericValidator<UnityEngine.Vector3>.ObjectValidator._CreateFieldValidator<Single>(null);
+                    GenericValidator<UnityEngine.Vector3Int>.ObjectValidator._CreateFieldValidator<Int32>(null);
+                    GenericValidator<UnityEngine.Vector4>.ObjectValidator._CreateFieldValidator<Single>(null);
+
+                    throw new System.InvalidOperationException("This method is used for AOT code generation only. Do not call it at runtime.");
+                }
+
                 public ObjectValidator()
                 {
                     var validators = new Dictionary<string, FieldValidator>();
@@ -534,6 +550,22 @@ namespace UniJSON
                     };
                 }
 
+                public static void TellIl2cppToGenerateRequiredGenericMethodCodes()
+                {
+                    GenericSerializer<UnityEngine.Color>.Serializer._CreateFieldSerializer<Single>(null);
+                    GenericSerializer<UnityEngine.Color32>.Serializer._CreateFieldSerializer<Byte>(null);
+                    GenericSerializer<UnityEngine.Rect>.Serializer._CreateFieldSerializer<Single>(null);
+                    GenericSerializer<UnityEngine.RectInt>.Serializer._CreateFieldSerializer<Int32>(null);
+                    GenericSerializer<UnityEngine.RectOffset>.Serializer._CreateFieldSerializer<Int32>(null);
+                    GenericSerializer<UnityEngine.Vector2>.Serializer._CreateFieldSerializer<Single>(null);
+                    GenericSerializer<UnityEngine.Vector2Int>.Serializer._CreateFieldSerializer<Int32>(null);
+                    GenericSerializer<UnityEngine.Vector3>.Serializer._CreateFieldSerializer<Single>(null);
+                    GenericSerializer<UnityEngine.Vector3Int>.Serializer._CreateFieldSerializer<Int32>(null);
+                    GenericSerializer<UnityEngine.Vector4>.Serializer._CreateFieldSerializer<Single>(null);
+
+                    throw new System.InvalidOperationException("This method is used for AOT code generation only. Do not call it at runtime.");
+                }
+
                 public Serializer()
                 {
                     var serializers = new Dictionary<string, FieldSerializer>();
@@ -681,6 +713,175 @@ namespace UniJSON
             where T : IListTreeItem, IValue<T>
         {
             GenericDeserializer<T, U>.Deserialize(src, ref dst, Properties);
+        }
+    }
+
+    public class Il2cppSupport
+    {
+        public static void TellIl2cppToGenerateRequiredGenericMethodCodes()
+        {
+            new JsonFormatter().Serialize(default(bool));
+            new JsonFormatter().Serialize(default(bool[]));
+            new JsonFormatter().SerializeArray(default(System.Collections.Generic.IEnumerable<bool>));
+            new JsonFormatter().SerializeArray(default(System.Collections.Generic.IEnumerable<bool[]>));
+            new JsonFormatter().Serialize(default(byte));
+            new JsonFormatter().Serialize(default(byte[]));
+            new JsonFormatter().SerializeArray(default(System.Collections.Generic.IEnumerable<byte>));
+            new JsonFormatter().SerializeArray(default(System.Collections.Generic.IEnumerable<byte[]>));
+            new JsonFormatter().Serialize(default(sbyte));
+            new JsonFormatter().Serialize(default(sbyte[]));
+            new JsonFormatter().SerializeArray(default(System.Collections.Generic.IEnumerable<sbyte>));
+            new JsonFormatter().SerializeArray(default(System.Collections.Generic.IEnumerable<sbyte[]>));
+            new JsonFormatter().Serialize(default(char));
+            new JsonFormatter().Serialize(default(char[]));
+            new JsonFormatter().SerializeArray(default(System.Collections.Generic.IEnumerable<char>));
+            new JsonFormatter().SerializeArray(default(System.Collections.Generic.IEnumerable<char[]>));
+            new JsonFormatter().Serialize(default(decimal));
+            new JsonFormatter().Serialize(default(decimal[]));
+            new JsonFormatter().SerializeArray(default(System.Collections.Generic.IEnumerable<decimal>));
+            new JsonFormatter().SerializeArray(default(System.Collections.Generic.IEnumerable<decimal[]>));
+            new JsonFormatter().Serialize(default(double));
+            new JsonFormatter().Serialize(default(double[]));
+            new JsonFormatter().SerializeArray(default(System.Collections.Generic.IEnumerable<double>));
+            new JsonFormatter().SerializeArray(default(System.Collections.Generic.IEnumerable<double[]>));
+            new JsonFormatter().Serialize(default(float));
+            new JsonFormatter().Serialize(default(float[]));
+            new JsonFormatter().SerializeArray(default(System.Collections.Generic.IEnumerable<float>));
+            new JsonFormatter().SerializeArray(default(System.Collections.Generic.IEnumerable<float[]>));
+            new JsonFormatter().Serialize(default(int));
+            new JsonFormatter().Serialize(default(int[]));
+            new JsonFormatter().SerializeArray(default(System.Collections.Generic.IEnumerable<int>));
+            new JsonFormatter().SerializeArray(default(System.Collections.Generic.IEnumerable<int[]>));
+            new JsonFormatter().Serialize(default(uint));
+            new JsonFormatter().Serialize(default(uint[]));
+            new JsonFormatter().SerializeArray(default(System.Collections.Generic.IEnumerable<uint>));
+            new JsonFormatter().SerializeArray(default(System.Collections.Generic.IEnumerable<uint[]>));
+            new JsonFormatter().Serialize(default(long));
+            new JsonFormatter().Serialize(default(long[]));
+            new JsonFormatter().SerializeArray(default(System.Collections.Generic.IEnumerable<long>));
+            new JsonFormatter().SerializeArray(default(System.Collections.Generic.IEnumerable<long[]>));
+            new JsonFormatter().Serialize(default(ulong));
+            new JsonFormatter().Serialize(default(ulong[]));
+            new JsonFormatter().SerializeArray(default(System.Collections.Generic.IEnumerable<ulong>));
+            new JsonFormatter().SerializeArray(default(System.Collections.Generic.IEnumerable<ulong[]>));
+            new JsonFormatter().Serialize(default(object));
+            new JsonFormatter().Serialize(default(object[]));
+            new JsonFormatter().SerializeArray(default(System.Collections.Generic.IEnumerable<object>));
+            new JsonFormatter().SerializeArray(default(System.Collections.Generic.IEnumerable<object[]>));
+            new JsonFormatter().Serialize(default(short));
+            new JsonFormatter().Serialize(default(short[]));
+            new JsonFormatter().SerializeArray(default(System.Collections.Generic.IEnumerable<short>));
+            new JsonFormatter().SerializeArray(default(System.Collections.Generic.IEnumerable<short[]>));
+            new JsonFormatter().Serialize(default(ushort));
+            new JsonFormatter().Serialize(default(ushort[]));
+            new JsonFormatter().SerializeArray(default(System.Collections.Generic.IEnumerable<ushort>));
+            new JsonFormatter().SerializeArray(default(System.Collections.Generic.IEnumerable<ushort[]>));
+            new JsonFormatter().Serialize(default(string));
+            new JsonFormatter().Serialize(default(string[]));
+            new JsonFormatter().SerializeArray(default(System.Collections.Generic.IEnumerable<string>));
+            new JsonFormatter().SerializeArray(default(System.Collections.Generic.IEnumerable<string[]>));
+            new JsonFormatter().Serialize(default(System.Boolean));
+            new JsonFormatter().Serialize(default(System.Boolean[]));
+            new JsonFormatter().SerializeArray(default(System.Collections.Generic.IEnumerable<System.Boolean>));
+            new JsonFormatter().SerializeArray(default(System.Collections.Generic.IEnumerable<System.Boolean[]>));
+            new JsonFormatter().Serialize(default(System.Byte));
+            new JsonFormatter().Serialize(default(System.Byte[]));
+            new JsonFormatter().SerializeArray(default(System.Collections.Generic.IEnumerable<System.Byte>));
+            new JsonFormatter().SerializeArray(default(System.Collections.Generic.IEnumerable<System.Byte[]>));
+            new JsonFormatter().Serialize(default(System.SByte));
+            new JsonFormatter().Serialize(default(System.SByte[]));
+            new JsonFormatter().SerializeArray(default(System.Collections.Generic.IEnumerable<System.SByte>));
+            new JsonFormatter().SerializeArray(default(System.Collections.Generic.IEnumerable<System.SByte[]>));
+            new JsonFormatter().Serialize(default(System.Char));
+            new JsonFormatter().Serialize(default(System.Char[]));
+            new JsonFormatter().SerializeArray(default(System.Collections.Generic.IEnumerable<System.Char>));
+            new JsonFormatter().SerializeArray(default(System.Collections.Generic.IEnumerable<System.Char[]>));
+            new JsonFormatter().Serialize(default(System.Decimal));
+            new JsonFormatter().Serialize(default(System.Decimal[]));
+            new JsonFormatter().SerializeArray(default(System.Collections.Generic.IEnumerable<System.Decimal>));
+            new JsonFormatter().SerializeArray(default(System.Collections.Generic.IEnumerable<System.Decimal[]>));
+            new JsonFormatter().Serialize(default(System.Double));
+            new JsonFormatter().Serialize(default(System.Double[]));
+            new JsonFormatter().SerializeArray(default(System.Collections.Generic.IEnumerable<System.Double>));
+            new JsonFormatter().SerializeArray(default(System.Collections.Generic.IEnumerable<System.Double[]>));
+            new JsonFormatter().Serialize(default(System.Single));
+            new JsonFormatter().Serialize(default(System.Single[]));
+            new JsonFormatter().SerializeArray(default(System.Collections.Generic.IEnumerable<System.Single>));
+            new JsonFormatter().SerializeArray(default(System.Collections.Generic.IEnumerable<System.Single[]>));
+            new JsonFormatter().Serialize(default(System.Int32));
+            new JsonFormatter().Serialize(default(System.Int32[]));
+            new JsonFormatter().SerializeArray(default(System.Collections.Generic.IEnumerable<System.Int32>));
+            new JsonFormatter().SerializeArray(default(System.Collections.Generic.IEnumerable<System.Int32[]>));
+            new JsonFormatter().Serialize(default(System.UInt32));
+            new JsonFormatter().Serialize(default(System.UInt32[]));
+            new JsonFormatter().SerializeArray(default(System.Collections.Generic.IEnumerable<System.UInt32>));
+            new JsonFormatter().SerializeArray(default(System.Collections.Generic.IEnumerable<System.UInt32[]>));
+            new JsonFormatter().Serialize(default(System.Int64));
+            new JsonFormatter().Serialize(default(System.Int64[]));
+            new JsonFormatter().SerializeArray(default(System.Collections.Generic.IEnumerable<System.Int64>));
+            new JsonFormatter().SerializeArray(default(System.Collections.Generic.IEnumerable<System.Int64[]>));
+            new JsonFormatter().Serialize(default(System.UInt64));
+            new JsonFormatter().Serialize(default(System.UInt64[]));
+            new JsonFormatter().SerializeArray(default(System.Collections.Generic.IEnumerable<System.UInt64>));
+            new JsonFormatter().SerializeArray(default(System.Collections.Generic.IEnumerable<System.UInt64[]>));
+            new JsonFormatter().Serialize(default(System.Object));
+            new JsonFormatter().Serialize(default(System.Object[]));
+            new JsonFormatter().SerializeArray(default(System.Collections.Generic.IEnumerable<System.Object>));
+            new JsonFormatter().SerializeArray(default(System.Collections.Generic.IEnumerable<System.Object[]>));
+            new JsonFormatter().Serialize(default(System.Int16));
+            new JsonFormatter().Serialize(default(System.Int16[]));
+            new JsonFormatter().SerializeArray(default(System.Collections.Generic.IEnumerable<System.Int16>));
+            new JsonFormatter().SerializeArray(default(System.Collections.Generic.IEnumerable<System.Int16[]>));
+            new JsonFormatter().Serialize(default(System.UInt16));
+            new JsonFormatter().Serialize(default(System.UInt16[]));
+            new JsonFormatter().SerializeArray(default(System.Collections.Generic.IEnumerable<System.UInt16>));
+            new JsonFormatter().SerializeArray(default(System.Collections.Generic.IEnumerable<System.UInt16[]>));
+            new JsonFormatter().Serialize(default(System.String));
+            new JsonFormatter().Serialize(default(System.String[]));
+            new JsonFormatter().SerializeArray(default(System.Collections.Generic.IEnumerable<System.String>));
+            new JsonFormatter().SerializeArray(default(System.Collections.Generic.IEnumerable<System.String[]>));
+            new JsonFormatter().Serialize(default(UnityEngine.Color));
+            new JsonFormatter().Serialize(default(UnityEngine.Color[]));
+            new JsonFormatter().SerializeArray(default(System.Collections.Generic.IEnumerable<UnityEngine.Color>));
+            new JsonFormatter().SerializeArray(default(System.Collections.Generic.IEnumerable<UnityEngine.Color[]>));
+            new JsonFormatter().Serialize(default(UnityEngine.Color32));
+            new JsonFormatter().Serialize(default(UnityEngine.Color32[]));
+            new JsonFormatter().SerializeArray(default(System.Collections.Generic.IEnumerable<UnityEngine.Color32>));
+            new JsonFormatter().SerializeArray(default(System.Collections.Generic.IEnumerable<UnityEngine.Color32[]>));
+            new JsonFormatter().Serialize(default(UnityEngine.Rect));
+            new JsonFormatter().Serialize(default(UnityEngine.Rect[]));
+            new JsonFormatter().SerializeArray(default(System.Collections.Generic.IEnumerable<UnityEngine.Rect>));
+            new JsonFormatter().SerializeArray(default(System.Collections.Generic.IEnumerable<UnityEngine.Rect[]>));
+            new JsonFormatter().Serialize(default(UnityEngine.RectInt));
+            new JsonFormatter().Serialize(default(UnityEngine.RectInt[]));
+            new JsonFormatter().SerializeArray(default(System.Collections.Generic.IEnumerable<UnityEngine.RectInt>));
+            new JsonFormatter().SerializeArray(default(System.Collections.Generic.IEnumerable<UnityEngine.RectInt[]>));
+            new JsonFormatter().Serialize(default(UnityEngine.RectOffset));
+            new JsonFormatter().Serialize(default(UnityEngine.RectOffset[]));
+            new JsonFormatter().SerializeArray(default(System.Collections.Generic.IEnumerable<UnityEngine.RectOffset>));
+            new JsonFormatter().SerializeArray(default(System.Collections.Generic.IEnumerable<UnityEngine.RectOffset[]>));
+            new JsonFormatter().Serialize(default(UnityEngine.Vector2));
+            new JsonFormatter().Serialize(default(UnityEngine.Vector2[]));
+            new JsonFormatter().SerializeArray(default(System.Collections.Generic.IEnumerable<UnityEngine.Vector2>));
+            new JsonFormatter().SerializeArray(default(System.Collections.Generic.IEnumerable<UnityEngine.Vector2[]>));
+            new JsonFormatter().Serialize(default(UnityEngine.Vector2Int));
+            new JsonFormatter().Serialize(default(UnityEngine.Vector2Int[]));
+            new JsonFormatter().SerializeArray(default(System.Collections.Generic.IEnumerable<UnityEngine.Vector2Int>));
+            new JsonFormatter().SerializeArray(default(System.Collections.Generic.IEnumerable<UnityEngine.Vector2Int[]>));
+            new JsonFormatter().Serialize(default(UnityEngine.Vector3));
+            new JsonFormatter().Serialize(default(UnityEngine.Vector3[]));
+            new JsonFormatter().SerializeArray(default(System.Collections.Generic.IEnumerable<UnityEngine.Vector3>));
+            new JsonFormatter().SerializeArray(default(System.Collections.Generic.IEnumerable<UnityEngine.Vector3[]>));
+            new JsonFormatter().Serialize(default(UnityEngine.Vector3Int));
+            new JsonFormatter().Serialize(default(UnityEngine.Vector3Int[]));
+            new JsonFormatter().SerializeArray(default(System.Collections.Generic.IEnumerable<UnityEngine.Vector3Int>));
+            new JsonFormatter().SerializeArray(default(System.Collections.Generic.IEnumerable<UnityEngine.Vector3Int[]>));
+            new JsonFormatter().Serialize(default(UnityEngine.Vector4));
+            new JsonFormatter().Serialize(default(UnityEngine.Vector4[]));
+            new JsonFormatter().SerializeArray(default(System.Collections.Generic.IEnumerable<UnityEngine.Vector4>));
+            new JsonFormatter().SerializeArray(default(System.Collections.Generic.IEnumerable<UnityEngine.Vector4[]>));
+
+            throw new System.InvalidOperationException("This method is used for AOT code generation only. Do not call it at runtime.");
         }
     }
 }
