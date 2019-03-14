@@ -28,7 +28,7 @@ namespace UniGLTF.ShaderPropExporter
 
     public static partial class PreShaderPropExporter
     {
-        const string TARGET_FOLDER = "UniGLTF/Core/Scripts";
+        const string TARGET_FOLDER = "UniGLTF/Scripts";
 
 #pragma warning disable 414
         [PreExportShaders]
