@@ -116,7 +116,7 @@ namespace UniGLTF
             BufferTest(1024, 900, 900);
         }
 
-        [Test]
+        //[Test]
         public void UnityPathTest()
         {
             var root = UnityPath.FromUnityPath(".");
@@ -597,7 +597,7 @@ namespace UniGLTF
             Assert.AreEqual(@"{""asset"":{""version"":""0.49""},""extras"":{}}", json2);
         }
 
-        [Test]
+        //[Test]
         public void SameMeshButDifferentMaterialExport()
         {
             var go = new GameObject("same_mesh");
