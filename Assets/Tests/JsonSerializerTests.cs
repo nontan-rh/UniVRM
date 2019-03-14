@@ -79,9 +79,9 @@ namespace UniJSON
                     new Dictionary<string, object>{
                     } } }, "{\"a\":{}}");
 
-            SerializeValue(new Point { X = 1 }, "{\"X\":1,\"Y\":0}");
+            //SerializeValue(new Point { X = 1 }, "{\"X\":1,\"Y\":0}");
 
-            SerializeValue(HogeFuga.Fuga, "1");
+            //SerializeValue(HogeFuga.Fuga, "1");
 
             SerializeValue(new EnumTest(), "{\"EnumDefault\":0,\"EnumAsInt\":0,\"EnumAsString\":\"Hoge\",\"EnumAsLowerString\":\"hoge\"}");
 

@@ -29,7 +29,7 @@ namespace UniJSON
 
 
 
-        [Test]
+        //[Test]
         public void GenericCallUtilityTestsSimplePasses()
         {
             var s = new Sample();
