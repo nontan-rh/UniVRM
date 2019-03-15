@@ -19,7 +19,7 @@ environment:
 
 init:
   - ps: |
-      Install-Module -Name UnitySetup -RequiredVersion 5.0.105
+      Install-Module -Name UnitySetup -RequiredVersion 5.0.109 -AllowPrerelease
       $unity_credential = New-Object Management.Automation.PSCredential ($env:unity_username, ($env:unity_password | ConvertTo-SecureString -AsPlainText -Force))
 
 install:
