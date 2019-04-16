@@ -4,4 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/VRM.Samples/Scenes/VRMRuntimeExporterSample.unity
+    guid: e13b17ee8476e1f4ebe216d08cf33a4e
+  m_configObjects: {}

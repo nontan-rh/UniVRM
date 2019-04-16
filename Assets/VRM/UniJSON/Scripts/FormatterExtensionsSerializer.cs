@@ -8,64 +8,9 @@ namespace UniJSON
 {
     public static class FormatterExtensionsSerializer
     {
-        public static void SerializeDictionary(this IFormatter f, IDictionary<string, object> dictionary)
-        {
-            f.BeginMap(dictionary.Count);
-            foreach (var kv in dictionary)
-            {
-                f.Key(kv.Key);
-                f.SerializeObject(kv.Value);
-            }
-            f.EndMap();
-        }
-
-        public static void SerializeArray<T>(this IFormatter f, IEnumerable<T> values)
-        {
-            f.BeginList(values.Count());
-            foreach (var value in values)
-            {
-                f.Serialize(value);
-            }
-            f.EndList();
-        }
-
-        public static void SerializeObjectArray(this IFormatter f, object[] array)
-        {
-            f.BeginList(array.Length);
-            foreach (var x in array)
-            {
-                f.SerializeObject(x);
-            }
-            f.EndList();
-        }
-
-        public static void SerializeObject(this IFormatter f, object value)
-        {
-            if (value == null)
-            {
-                f.Null();
-            }
-            else
-            {
-                typeof(FormatterExtensionsSerializer).GetMethod("Serialize")
-                    .MakeGenericMethod(value.GetType()).Invoke(null, new object[] { f, value });
-            }
-        }
-
         public static void Serialize<T>(this IFormatter f, T arg)
         {
-            if (arg == null)
-            {
-                f.Null();
-                return;
-            }
-
             GenericSerializer<T>.Serialize(f, arg);
-        }
-
-        public static void SetCustomSerializer<T>(Action<IFormatter, T> serializer)
-        {
-            GenericSerializer<T>.Set(serializer);
         }
 
         public static MethodInfo GetMethod(string name)
@@ -140,14 +85,16 @@ namespace UniJSON
 
             {
                 // reflection
-                var schema = JsonSchema.FromType<T>();
+                //                var schema = JsonSchema.FromType<T>();
                 return (IFormatter f, T value) =>
                 {
+                    /*
                     var c = new JsonSchemaValidationContext(value)
                     {
                         EnableDiagnosisForNotRequiredFields = true
                     };
                     schema.Serialize(f, value, c);
+                    */
                 };
             }
 

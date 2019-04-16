@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<linker>
+  <assembly fullname="UniJSON" preserve="all"></assembly>
+  <assembly fullname="UniGLTF" preserve="all"></assembly>
+  <assembly fullname="VRM" preserve="all"></assembly>
+</linker>

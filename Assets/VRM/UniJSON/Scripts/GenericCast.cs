@@ -7,14 +7,7 @@ namespace UniJSON
     {
         public static T Null()
         {
-            if (typeof(T).IsClass)
-            {
-                return default(T);
-            }
-            else
-            {
-                throw new MsgPackTypeException("can not null");
-            }
+            return default(T);
         }
 
         delegate T CastFunc(S value);
